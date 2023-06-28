@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
+
+    id: {
+        type: Number,
+    },
     firstname: {
         type: String,
     },
@@ -15,10 +19,10 @@ const UserSchema = new mongoose.Schema({
     },
     password: {
         type: String,
+    },
+    role: {
+        type: Number,
     }
-    // role: {
-    //     type: Int16Array,
-    // }
 })
 
 
