@@ -1,18 +1,12 @@
-const express = require('express')
-const router = express.Router()
 
-const Users = require('../../models/Users')
+const express = require('express');
+const router = express.Router();
+const { register, login } = require('../../controllers/authController');
 
-router.get('/users', (req, res) => {
-    Users.find()
-    .then(question => res.json(question))
-    .catch(err => res.status(404).json({noUserFound: 'table user empty'}))
-})
+// Route d'inscription (register)
+router.post('/register', register);
 
-router.post('/users', (req, res) => {
-    Users.create(req, res)
-    .then(question => res.json({msg: 'utilisateur ajouter'}))
-    .catch(err => res.status(404).json({noUserFound: 'Impossible d\'ajouter l\'utilisateur'}))
-})
+// Route de connexion (login)
+router.post('/login', login);
 
 module.exports = router;
