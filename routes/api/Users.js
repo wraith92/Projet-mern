@@ -5,7 +5,7 @@ const Users = require('../../models/Users')
 
 router.get('/users', (req, res) => {
     Users.find()
-    .then(question => res.json(question))
+    .then(user => res.json(user))
     .catch(err => res.status(404).json({noUserFound: 'table user empty'}))
 })
 

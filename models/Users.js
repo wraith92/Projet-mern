@@ -15,8 +15,11 @@ const UserSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-    },
+    }
+    // role: {
+    //     type: Int16Array,
+    // }
 })
 
 
-module.exports = Users = mongoose.model('Users', UserSchema, "Users")
+module.exports = Users = mongoose.model('Users', UserSchema)

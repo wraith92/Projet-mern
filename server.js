@@ -14,7 +14,7 @@ app.use(express.json())
 connectDB();
 
 
-// app.use('/api/')
+app.use('/api', Users);
 
 app.listen(3000, () => {
   console.log(`Server running on port 3000 connecting to MongoDB`);
@@ -22,4 +22,3 @@ app.listen(3000, () => {
 
 
 console.log('hello world')
-
