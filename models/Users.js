@@ -18,8 +18,9 @@ const UserSchema = new mongoose.Schema({
     },
     role: {
         type: Number,
+
     },
 })
 
 
-module.exports = Users = mongoose.model('Users', UserSchema, "Users")
+module.exports = Users = mongoose.model('Users', UserSchema, "users")
