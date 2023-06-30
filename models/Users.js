@@ -15,11 +15,12 @@ const UserSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-    }
-    // role: {
-    //     type: Int16Array,
-    // }
+    },
+    role: {
+        type: Number,
+
+    },
 })
 
 
-module.exports = Users = mongoose.model('Users', UserSchema)
+module.exports = Users = mongoose.model('Users', UserSchema, "users")
