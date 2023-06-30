@@ -5,7 +5,7 @@ let cors = require('cors')
 require('dotenv').config()
 const Products = require('./routes/api/Products')
 const Auth = require('./routes/api/Connexion')
-
+const Users = require('./routes/api/Users')
 const app = express();
 
 const connectDB = require('./db/conn');
@@ -19,6 +19,7 @@ const isConnectedToDB =  connectDB();
 //Routes 
 app.use('/api', Auth);
 app.use('/api', Products);
+app.use('/api', Users);
 
 
 app.listen(3000, () => {
